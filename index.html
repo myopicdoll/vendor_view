@@ -1,0 +1,100 @@
+<head>
+    <!-- Material Icons -->
+    <link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
+    <!-- MDL CSS -->
+    <link rel='stylesheet' href='https://code.getmdl.io/1.1.1/material.indigo-pink.min.css'>
+    <!-- MDL JS -->
+    <script src='./mdl/material.min.js'></script>
+    <!-- Stepper minified CSS -->
+    <link rel='stylesheet' href='./mdl-stepper-master/src/css/stepper.min.css'>
+    <!-- Stepper minified JS -->
+    <script defer src='./mdl-stepper-master/src/js/stepper.min.js'></script>
+    <link rel='stylesheet' href='http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css' />
+    <link href='https://fonts.googleapis.com/css?family=Montserrat|Roboto:300' rel='stylesheet' type='text/css'>
+    <!-- Materialize-tags -->
+    <link rel='stylesheet' href='./node_modules/materialize-css/dist/css/materialize.min.css'>
+    <script src='./node_modules/jquery/dist/jquery.min.js'></script>
+    <link rel='stylesheet' href='./node_modules/materialize-tags/dist/css/materialize-tags.min.css'>
+    <script src='./node_modules/materialize-tags/dist/js/materialize-tags.min.js'></script>
+    <script src='http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js'></script>
+    <script src='http://d3js.org/d3.v3.min.js'></script>
+    <script src='./js/typeahead.bundle.js'></script>
+    <link rel='stylesheet' href='./css/vendor_view.css' type='text/css'>
+</head>
+<!-- markup -->
+<body>
+  <ul class='mdl-stepper mdl-stepper--linear' id='vendor-view'>
+  <div class='logo-container'>
+    <img src="./img/icon-logo.svg" class="img-responsive horiz-center">
+  </div>
+  <li class='mdl-step mdl-step--editable'>
+    <span class='mdl-step__label'>
+      <span class='mdl-step__title'>
+        <span class='mdl-step__title-text'>Select a KEY market</span>
+        <span class='mdl-step__title-message' id='step-1-summary'></span>
+      </span>
+    </span>
+    <div class='mdl-step__content'>
+    <div id='step-1-buttons'></div>
+    <div id='map'></div>
+    </div>
+    <div class='mdl-step__actions'>
+      <button class='mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--colored mdl-button--raised' id='step-1-continue' data-stepper-next>
+        Continue
+      </button>
+      <button class='mdl-button mdl-js-button mdl-js-ripple-effect' data-stepper-cancel>
+        Cancel
+      </button>
+    </div>
+  </li>
+  <li class='mdl-step'>
+    <span class='mdl-step__label'>
+      <span class='mdl-step__title'>
+        <span class='mdl-step__title-text'>Select an itinerary item category</span>
+      </span>
+    </span>
+    <div class='mdl-step__content'>
+      <div id='step-2-buttons'></div>
+          <button class='mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon' id='btn1'>
+            <i class='material-icons'>more_vert</i> 
+          </button>
+          <ul class='mdl-menu mdl-js-menu mdl-menu--bottom-right' for='btn1'>
+            <li class='mdl-menu__item'>Lorem</li>
+            <li class='mdl-menu__item' disabled>Ipsum</li>
+            <li class='mdl-menu__item'>Dolor</li>
+          </ul>
+          <div>
+            <label for='tags' class='hola'>Filters</label>
+            <input type='text' name='tags' id='tags' value='tag1, tag2, tag3' data-role='materialtags'/>
+          </div>
+    </div>
+    <div class='mdl-step__actions'>
+      <button class='mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--colored mdl-button--raised' data-stepper-next>
+        Continue
+      </button>
+      <button class='mdl-button mdl-js-button mdl-js-ripple-effect' data-stepper-cancel>
+        Cancel
+      </button>
+    </div>
+  </li>
+  <li class='mdl-step'>
+    <span class='mdl-step__label'>
+      <span class='mdl-step__title'>
+        <span class='mdl-step__title-text'>Select item details</span>
+      </span>
+    </span>
+    <div class='mdl-step__content'></div>
+    <div class='mdl-step__actions'>
+      <button class='mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--colored mdl-button--raised' data-stepper-next>
+        Continue
+      </button>
+      <button class='mdl-button mdl-js-button mdl-js-ripple-effect' data-stepper-cancel>
+        Cancel
+      </button>
+    </div>
+  </li>
+</ul>
+</body>
+
+    <!-- main -->
+    <script src='main.js'></script>
